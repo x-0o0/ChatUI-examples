@@ -39,21 +39,38 @@ struct ChatView: View {
                     )
                 }
                 .padding(.top, 12)
-                /// 5. `MessageRow`: actions
-                .onTapGesture(count: 1) {
-                    guard message.readReceipt == .failed else { return }
-                    withAnimation {
-                        dataModel.messages
-                            .removeAll { $0.id == message.id }
-                    }
+                .onTapGesture(count: 2) {
+                    /// 5. `MessageRow`: actions
+                    /// such as *Like*
                 }
-                .onLongPressGesture {
-                    guard message.readReceipt != .failed else { return }
-                    withAnimation {
-                        dataModel.messages
-                            .removeAll { $0.id == message.id }
+            } menuContent: { message in
+                /// 4. MessageList shows message menu with `MenuContent`
+                MessageMenu {
+                    Button {
+                        switch message.style {
+                        case .text(let string):
+                            UIPasteboard.general.string = string
+                        default: return
+                        }
+                    } label: {
+                        Label("Copy", systemImage: "doc.on.doc")
                     }
+                    .frame(height: 44)
+                    .foregroundColor(appearance.tint)
+                    
+                    Divider()
+                    
+                    Button {
+                        withAnimation {
+                            dataModel.messages.removeAll { $0.id == message.id }
+                        }
+                    } label: {
+                        Label("Delete", systemImage: "trash")
+                    }
+                    .frame(height: 44)
+                    .foregroundColor(appearance.error)
                 }
+                .padding(.top, 12)
             }
             
             Divider()

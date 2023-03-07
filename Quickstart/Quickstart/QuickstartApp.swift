@@ -15,13 +15,14 @@ struct QuickstartApp: App {
         userID: "andrew_parker",
         giphyKey: "wj5tEh9nAwNHVF3ZFavQ0zoaIyt8HZto"
     )
-    
+    let appearance = Appearance(tint: .indigo, localMessageBackground: .indigo)
     var body: some Scene {
         WindowGroup {
             NavigationView {
                 ChatView()
                     /// 1. How to use `ChatConfiguration`
                     .environmentObject(configuration)
+                    .environment(\.appearance, appearance)
             }
         }
     }
