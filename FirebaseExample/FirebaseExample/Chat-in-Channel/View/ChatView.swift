@@ -9,6 +9,7 @@ import ChatUI
 import SwiftUI
 
 struct ChatView: View {
+    @Environment(\.appearance) var appearance
     @StateObject private var chat = ChatModel()
     @State private var isMenuPresented: Bool = false
     
@@ -16,9 +17,28 @@ struct ChatView: View {
         if let channel = chat.channel {
             NavigationView {
                 ChannelStack(channel) {
-                    MessageList(chat.messages) { message in
+                    MessageList(chat.messages, showsDate: true) { message in
                         MessageRow(message: message)
                             .padding(.top, 12)
+                    } menuContent: { message in
+                        MessageMenu {
+                            // Copy action
+                            Button {
+                                copyMessage(style: message.style)
+                            } label: {
+                                HStack {
+                                    Text("Copy")
+                                    
+                                    Spacer()
+                                    
+                                    Image(systemName: "doc.on.doc")
+                                }
+                                .padding(.horizontal, 16)
+                                .foregroundColor(appearance.primary)
+                            }
+                            .frame(height: 44)
+                        }
+                        .padding(.top, 12)
                     }
                     
                     MessageField(
@@ -55,6 +75,15 @@ struct ChatView: View {
                 }
             }
         }
+    }
+    
+    func copyMessage(style: MessageStyle) {
+        switch style {
+        case .text(let string):
+            UIPasteboard.general.string = string
+        default: break
+        }
+        highlightMessagePublisher.send(nil)
     }
 }
 
