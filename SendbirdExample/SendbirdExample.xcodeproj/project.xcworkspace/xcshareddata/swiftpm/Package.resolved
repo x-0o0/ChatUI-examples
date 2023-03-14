@@ -1,0 +1,41 @@
+{
+  "pins" : [
+    {
+      "identity" : "chatui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jaesung-0o0/ChatUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "dbea0c4729cf6a2204b883121cad69b1ab0e2fa5"
+      }
+    },
+    {
+      "identity" : "giphy-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Giphy/giphy-ios-sdk",
+      "state" : {
+        "revision" : "699483a3a2b534e9dc3a3ab85a9f7095e306bde1",
+        "version" : "2.2.2"
+      }
+    },
+    {
+      "identity" : "libwebp-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/libwebp-Xcode",
+      "state" : {
+        "revision" : "4f52fc9b29600a03de6e05af16df0d694cb44301",
+        "version" : "1.2.4"
+      }
+    },
+    {
+      "identity" : "sendbird-chat-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sendbird/sendbird-chat-sdk-ios",
+      "state" : {
+        "branch" : "master",
+        "revision" : "46a5ffae084dd91797db16ae6d561e23e3d21a5f"
+      }
+    }
+  ],
+  "version" : 2
+}

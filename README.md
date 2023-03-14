@@ -6,7 +6,12 @@ The actual examples of [ChatUI](https://github.com/jaesung-0o0/ChatUI) with usin
 
 - [x] Quickstart
 - [x] ChatGPT
+    - [Chat completion](https://platform.openai.com/docs/guides/chat/chat-completions-beta)
+    - Typing effect
 - [x] Firebase
+    - [Firestore](https://firebase.google.com/docs/firestore/quickstart))
+- [x] Sendbird
+    - [Open channel](https://sendbird.com/docs/chat/v4/ios/getting-started/send-first-message#1-send-your-first-message)
 
 > **NOTE** 
 >
