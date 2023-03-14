@@ -9,7 +9,7 @@ import ChatUI
 import SwiftUI
 
 /// This API key for free trial. So the chat may not work when it exceeds the daily usage.
-/// - IMPORTANT: To use own API key is *recommended*.
+/// - IMPORTANT: To use own API key is *neccessary*. You can see your API key from [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
 let apiKey = "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"
 let chatbotAPIURL = URL(string: "https://api.openai.com/v1/completions")!
 

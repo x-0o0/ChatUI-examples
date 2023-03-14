@@ -23,8 +23,11 @@ struct ChatView: View {
                     .padding(.vertical, 12)
             } else {
                 MessageList(chatGPT.messages) { message in
-                    MessageRow(message: message)
-                        .padding(.top, 12)
+                    GPTMessageRow(
+                        message: message,
+                        isLastMessage: chatGPT.messages.first == message
+                    )
+                    .padding(.top, 12)
                 }
             }
             
@@ -40,6 +43,13 @@ struct ChatView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        NavigationView {
+            ChatView()
+                .environmentObject(ChatConfiguration(userID: User.me.id))
+                .environment(\.appearance, Appearance(
+                    tint: Color(red: 0, green: 166 / 255, blue: 126 / 255),
+                    localMessageBackground: Color(red: 0, green: 166 / 255, blue: 126 / 255)
+                ))
+        }
     }
 }
