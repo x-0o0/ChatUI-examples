@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "chatui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jaesung-0o0/ChatUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "93cef631c1a4a81a28a9cfb4ea63a10d321a4b6e"
+      }
+    },
+    {
+      "identity" : "generative-ai-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jaesung-0o0/generative-ai-swift",
+      "state" : {
+        "branch" : "feature/jaesung/swift-5.7.1",
+        "revision" : "1fa15ae0962106a33859bcb26a293b467ed70dec"
+      }
+    },
+    {
+      "identity" : "get",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Get",
+      "state" : {
+        "revision" : "12830cc64f31789ae6f4352d2d51d03a25fc3741",
+        "version" : "2.1.6"
+      }
+    },
+    {
+      "identity" : "giphy-ios-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Giphy/giphy-ios-sdk",
+      "state" : {
+        "revision" : "6458f772cc136dbd54fbab9c01decb959be58323",
+        "version" : "2.2.4"
+      }
+    },
+    {
+      "identity" : "libwebp-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/libwebp-Xcode",
+      "state" : {
+        "revision" : "4f52fc9b29600a03de6e05af16df0d694cb44301",
+        "version" : "1.2.4"
+      }
+    },
+    {
+      "identity" : "urlqueryencoder",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/CreateAPI/URLQueryEncoder",
+      "state" : {
+        "revision" : "4ce950479707ea109f229d7230ec074a133b15d7",
+        "version" : "0.2.1"
+      }
+    }
+  ],
+  "version" : 2
+}
