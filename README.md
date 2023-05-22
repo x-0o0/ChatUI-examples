@@ -8,6 +8,8 @@ The actual examples of [ChatUI](https://github.com/jaesung-0o0/ChatUI) with usin
 - [x] ChatGPT
     - [Chat completion](https://platform.openai.com/docs/guides/chat/chat-completions-beta)
     - Typing effect
+- [x] PaLM API - Google Generative AI
+    - [Chat](https://developers.generativeai.google/tutorials/chat_swift_quickstart)
 - [x] Firebase
     - [Firestore](https://firebase.google.com/docs/firestore/quickstart)
 - [x] Sendbird
